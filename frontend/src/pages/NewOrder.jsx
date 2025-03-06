@@ -1,7 +1,9 @@
-function NewOrderPage() {
+function NewOrder() {
   return (
-    <p>Hello world!</p>
+    <div className="new-order-content">
+      <p>New orders hehere</p>
+    </div>
   );
 }
 
-export default NewOrderPage;
+export default NewOrder;

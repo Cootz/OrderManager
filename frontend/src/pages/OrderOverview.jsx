@@ -1,6 +1,6 @@
 function OrderOverview() {
   return (
-    <p>Hello world!</p>
+      <p>Order Overview</p>
   );
 }
 
