@@ -1,6 +1,8 @@
 function OrdersOverview() {
   return (
-    <p>Orders list here</p>
+    <div className="orders-overview-content">
+      <p>Orders list here</p>
+    </div>
   );
 }
 

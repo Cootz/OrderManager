@@ -1,9 +1,6 @@
 import './navbar.css';
-import { useState } from 'react';
 
 function Navbar() {
-    const [open, setOpen] = useState(false);
-
     return (
         <nav>
             <div className="left">
