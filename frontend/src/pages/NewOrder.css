@@ -1,0 +1,9 @@
+.new-order-content {
+    .errorInput {
+        border-color: red;
+    }
+
+    button {
+        margin-top: 1rem;
+    }
+}

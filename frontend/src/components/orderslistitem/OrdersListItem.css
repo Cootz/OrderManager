@@ -1,0 +1,6 @@
+.order-list-item-content {
+    display: flex;
+    p {
+        font-style: italic;
+    }
+}
