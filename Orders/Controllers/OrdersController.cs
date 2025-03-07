@@ -13,15 +13,15 @@ namespace Orders.Controllers
 
         public OrdersController(OrdersProvider provider) => this.provider = provider;
 
-        [HttpGet]
+        [HttpGet(nameof(GetOrderById))]
         public ActionResult GetOrderById(Guid id)
         {
-            Order order = provider.GetOrderById(id);
+            Order? order = provider.GetOrderById(id);
 
             return order != null ? Ok(order) : NotFound();
         }
 
-        [HttpGet]
+        [HttpGet(nameof(GetOrders))]
         public ActionResult GetOrders(int pagination, int currentPage)
         {
             IEnumerable<Order> orders = provider.GetOrders(pagination, currentPage);
@@ -30,7 +30,7 @@ namespace Orders.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult> AddOrder(Order order)
+        public async Task<ActionResult> AddOrder([FromBody] Order order)
         {
             await provider.AddOrderAsync(order);
 
