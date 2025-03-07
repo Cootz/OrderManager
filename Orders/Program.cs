@@ -11,7 +11,7 @@ builder.Services
     .AddOpenApi()
     .AddCors(options =>
     {
-        options.AddDefaultPolicy(policy => 
+        options.AddDefaultPolicy(policy =>
             policy
                 .AllowAnyOrigin()
                 .AllowAnyMethod()
