@@ -53,35 +53,37 @@ function NewOrder() {
   return (
     <div className="new-order-content">
         <form onSubmit={handleSubmit}>
-          <label>
+          <h2>Новый заказ</h2>
+
+          <div className="form-label">
             Введите город отправителя:
             <input type="text" name="departureCity" value={orderData.departureCity} onChange={handleChange} className={errors.departureCity ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
-          <label>
+          <div className="form-label">
             Введите адрес отправителя:
             <input type="text" name="departureLocation" value={orderData.departureLocation} onChange={handleChange} className={errors.departureLocation ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
-          <label>
+          <div className="form-label">
             Введите город получателя:
             <input type="text" name="arrivalCity" value={orderData.arrivalCity} onChange={handleChange} className={errors.arrivalCity ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
-          <label>
+          <div className="form-label">
             Введите адрес получателя:
             <input type="text" name="arrivalLocation" value={orderData.arrivalLocation} onChange={handleChange} className={errors.arrivalLocation ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
-          <label>
-            Введите вес груза:
+          <div className="form-label">
+            Введите вес груза (кг):
             <input type="number" step="0.01" name="weight" value={orderData.weight} onChange={handleChange} className={errors.weight ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
-          <label>
+          <div className="form-label">
             Введите дату забора груза:
             <input type="date" name="pickupDate" value={orderData.pickupDate} onChange={handleChange} className={errors.pickupDate ? 'errorInput' : ''}/>
-          </label>
+          </div>
           <br />
           <button type="submit">Submit</button>
       </form>

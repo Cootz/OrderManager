@@ -1,0 +1,9 @@
+.order-overview-content {
+    display: flex;
+    flex-direction: column;
+
+    p {
+        font-size: 1.5rem;
+        margin: 5px;
+    }
+}

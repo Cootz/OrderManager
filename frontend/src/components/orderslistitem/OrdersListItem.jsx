@@ -1,15 +1,20 @@
+import { useNavigate } from 'react-router-dom';
 import './OrdersListItem.css'
 
 export default function OrdersListItem({order}){
+    const navigate = useNavigate();
+
+    function handleClick() {
+        navigate("/order", {state: order});
+    }
+
     return (
-        <div content="order-list-item-content">
-            <h2>{order.id}</h2>
-            <p>{order.departureCity}</p>
-            <p>{order.departureLocation}</p>
-            <p>{order.arrivalCity}</p>
-            <p>{order.arrivalLocation}</p>
+        <a className="order-list-item-content" onClick={handleClick}>
+            <p>{order.id}</p>
+            <p>From {order.departureCity}</p>
+            <p>To {order.arrivalCity}</p>
             <p>{order.weight} kg</p>
             <p>{order.pickupDate}</p>
-        </div>
+        </a>
     );
 }
