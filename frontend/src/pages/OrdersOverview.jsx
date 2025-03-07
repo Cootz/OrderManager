@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import OrdersList from '../components/ordersList/OrdersList';
 import './OrdersOverview.css';
-import { getOrders } from '../fetch/OrdersFetch';
+import { getOrders } from '../api/OrdersAPI';
 
 function OrdersOverview() {
     const [orders, setOrders] = useState([]);

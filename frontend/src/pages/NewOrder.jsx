@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Order } from "../data/Order";
 import "./NewOrder.css"
 import { useNavigate } from "react-router-dom";
-import { postOrder } from "../fetch/OrdersFetch";
+import { postOrder } from "../api/OrdersAPI";
 
 function NewOrder() {
   const [orderData, setOrderData] = useState(new Order());
