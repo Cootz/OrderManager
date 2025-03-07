@@ -4,8 +4,9 @@ using Orders.Implementation.Providers;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+builder.Configuration.AddEnvironmentVariables();
 
+// Add services to the container.
 builder.Services
     .AddScoped<OrdersProvider>()
     .AddOpenApi()
