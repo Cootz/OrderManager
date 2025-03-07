@@ -1,14 +1,15 @@
+import { Link } from 'react-router-dom';
 import './navbar.css';
 
 function Navbar() {
     return (
         <nav>
             <div className="left">
-                <a href="/" className="orders">Orders</a>
+                <Link to="/" className="orders">Orders</Link>
             </div>
 
             <div className="right">
-                <a href="/neworder">New order</a>
+                <Link to="/neworder">New order</Link>
             </div>
         </nav>
     );

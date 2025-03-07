@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import OrdersList from '../components/ordersList/OrdersList';
+import OrdersList from '../components/orderslist/OrdersList';
 import './OrdersOverview.css';
 import { getOrders } from '../api/OrdersAPI';
 

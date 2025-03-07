@@ -7,20 +7,20 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
     return (
-        <div className="layout">
-            <div className="navbar">
-                <Navbar/>
-            </div>
-            <div className="content">
-                <BrowserRouter>
+        <BrowserRouter>
+            <div className="layout">
+                <div className="navbar">
+                    <Navbar/>
+                </div>
+                <div className="content">
                     <Routes>
                         <Route path="/" element={<OrdersOverview/>} />
                         <Route path="/neworder" element={<NewOrder/>} />
                         <Route path="/order" element={<OrderOverview/>} />
                     </Routes>
-                </BrowserRouter>
+                </div>
             </div>
-      </div>
+        </BrowserRouter>
   )
 }
 
