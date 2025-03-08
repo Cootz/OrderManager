@@ -8,10 +8,10 @@ function OrdersOverview() {
 
     //Pagination is not implemented in this app, but api allows it
     let pagination = 100;
-    let currentPage = 0;
+    let currentPageIndex = 0;
   
     useEffect(() => {
-      const fetchOrders = async () => setOrders(await getOrders(pagination, currentPage));
+      const fetchOrders = async () => setOrders(await getOrders(pagination, currentPageIndex));
 
       fetchOrders();
     }, []);

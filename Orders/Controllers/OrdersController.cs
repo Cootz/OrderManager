@@ -26,15 +26,15 @@ namespace Orders.Controllers
         }
 
         /// <summary>
-        /// Get <see cref="Order"/>s with corresponding <paramref name="pagination"/> and <paramref name="currentPage"/>
+        /// Get <see cref="Order"/>s with corresponding <paramref name="pagination"/> and <paramref name="pageIndex"/>
         /// </summary>
         /// <param name="pagination">Number of items per page</param>
-        /// <param name="currentPage">Current page number. Starts from 0</param>
-        /// <returns>Array of <see cref="Order"/>s from <paramref name="currentPage"/> or empty array if no <see cref="Order"/>s were found</returns>
+        /// <param name="pageIndex">Current page number. Starts from 0</param>
+        /// <returns>Array of <see cref="Order"/>s from <paramref name="pageIndex"/> or empty array if no <see cref="Order"/>s were found</returns>
         [HttpGet(nameof(GetOrders))]
-        public async Task<ActionResult> GetOrders(int pagination, int currentPage)
+        public async Task<ActionResult> GetOrders(int pagination, int pageIndex)
         {
-            IEnumerable<Order> orders = await provider.GetOrdersAsync(pagination, currentPage);
+            IEnumerable<Order> orders = await provider.GetOrdersAsync(pagination, pageIndex);
 
             return Ok(orders);
         }

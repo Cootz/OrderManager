@@ -21,8 +21,8 @@ export async function postOrder(order)
     return response.ok
 }
 
-export async function getOrders(pagination, currentPage) {
-    const response = await fetch(`${BaseAdrress}/Orders/GetOrders?pagination=${pagination}&currentPage=${currentPage}`);
+export async function getOrders(pagination, index) {
+    const response = await fetch(`${BaseAdrress}/Orders/GetOrders?pagination=${pagination}&pageIndex=${index}`);
         
     return await response.json();
 }
