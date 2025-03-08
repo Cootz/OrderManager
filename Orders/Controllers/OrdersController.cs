@@ -1,8 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Orders.Implementation.Providers;
 using Orders.Model;
-using System.Data;
 
 namespace Orders.Controllers
 {

@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Orders.Implementation.Database;
 using Orders.Model;
-using System.Data;
 
 namespace Orders.Implementation.Providers
 {
@@ -12,7 +11,7 @@ namespace Orders.Implementation.Providers
     {
         private readonly OrdersDbContext dbContext;
 
-        public OrdersProvider(OrdersDbContext dbContext) => this.dbContext = dbContext; 
+        public OrdersProvider(OrdersDbContext dbContext) => this.dbContext = dbContext;
 
         /// <summary>
         /// Adds <see cref="Order"/> to database
@@ -38,7 +37,7 @@ namespace Orders.Implementation.Providers
         /// <param name="pagination">Number of items per page</param>
         /// <param name="index">Current page index. Starts with 0</param>
         /// <returns>Array of <see cref="Order"/>s or empty array if no <see cref="Order"/>s were found</returns>
-        public Task<Order[]> GetOrdersAsync(int pagination, int index) 
-            => dbContext.Orders.Skip(pagination*index).Take(pagination).ToArrayAsync();
+        public Task<Order[]> GetOrdersAsync(int pagination, int index)
+            => dbContext.Orders.Skip(pagination * index).Take(pagination).ToArrayAsync();
     }
 }
